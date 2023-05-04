@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Юмор</title>
+</head>
+<body>
+    <header class="header">
+        <div class="head-btns">
+            <a class="btn-glav" href="./index.html">JDM INFO</a>
+            <a href="./history.html"><button type="button" class="btn btn-outline-light">О JDM</button></a>
+            <a href="./cars.html"><button type="button" class="btn btn-outline-light">Марки</button></a>
+            <a href="./access.html"><button type="button" class="btn btn-outline-light">Детали</button></a>
+            <a href="./umor.html"><button type="button" class="btn btn-outline-light">Юмор</button></a>
+            <a href="./facts.html"><button type="button" class="btn btn-outline-light">Факты</button></a>
+            <a href="./tests.html"><button type="button" class="btn btn-outline-light">Тест</button></a>
+        </div>
+    </header>
+    <main class="razdely">
+        <div class="cont">
+            <h2 class="razdely-head">ЮМОР</h2>
+            <div class="umor-row">
+                <div class="umor-left">
+                    <img src="./img/umor/jdmweborlife.jpg">
+                    <p>
+                        Если Mark не едет к столбу, то столб едет к Марку!
+                    </p>
+                    <p>
+                        Лучше кушать стеклотару, чем кататься на Subaru!
+                    </p>
+                    <p>
+                        Ездишь на японце? Добро пожаловать в клуб стукачей!
+                    </p>
+                    <p>
+                        Сузуководы - настырные. Есть дорога, нет дороги, а они пищат и лезут в бой.<br>
+                        Маздаводы - камикадзе. Носятся по дорогам, оправдывают слоган. Вот тебе и "Zoom-zoom"...<br>
+                        Митцубаводы - веселые. Ну и что, что чек? Зато весело...
+                    </p>
+                    <img src="./img/umor/carinice.jpg">
+
+                    <div class="rating">Вам понравились шутки?</div>
+                    <div id="rating">
+                        <span class="heart">&#x2661;</span>
+                        <span class="heart">&#x2661;</span>
+                        <span class="heart">&#x2661;</span>
+                        <span class="heart">&#x2661;</span>
+                        <span class="heart">&#x2661;</span>
+                    </div>
+            
+                    <script>
+                        const rating = document.getElementById("rating");
+                        const hearts = rating.getElementsByClassName("heart");
+                        let currentRating = localStorage.getItem("rating") || 0;
+            
+                        // Устанавливаем начальное значение рейтинга
+                        for (let i = 0; i < currentRating; i++) {
+                        hearts[i].style.color = "red";
+                        }
+            
+                        // Обрабатываем клики на сердечки
+                        for (let i = 0; i < hearts.length; i++) {
+                        hearts[i].addEventListener("click", function() {
+                            currentRating = i + 1;
+                            localStorage.setItem("rating", currentRating);
+                            for (let j = 0; j < hearts.length; j++) {
+                            hearts[j].style.color = j < currentRating ? "red" : "#333";
+                            }
+                        });
+                        }
+            
+                    </script>
+                </div>
+                <div class="umor-right">
+                    <p>
+                        Субарист на СТО<br>
+                        Заходит субарист на станцию обслуживания, берёт пятилитровку зимнего стеклоомывателя, подходит к менеджеру чтобы рассчитаться.
+                        Менеджер спрашивает:<br>
+                        — А масла не нужно? 5w40, можем скидочку сделать. Антифриз на доливку?<br>
+                        — Масло больше не ест. Все жидкости в уровень.<br>
+                        — Замечательно! А по подвеске? Новый распил пришел, у вас, помню, ступичный загудел... Сайлентблоки пришли хорошие аналоги...<br>
+                        — Нет, подвеска в идеале.<br>
+                        — Мы, кстати, электрика нового взяли, крутой спец, любые вопросы решает, чеки локализует, косу может с закрытыми глазами перебросить...<br>
+                        — Спасибо, ничего не беспокоит.<br>
+                        Менеджер встаёт из-за стола, пожимает руку клиенту, зовёт управляющего, со слезами на глазах передаёт ему суть беседы.
+                        Управляющий достаёт из шкафа 12-летний виски, объявляет что у всех сотрудников остаток дня выходной и поднимает тост:<br>
+                        — Вы наш первый клиент, который привёл своего субарика в идеал. Поздравляю! Забирайте омывайку бесплатно!<br>
+                        — Да я солярис купил.<br>
+                        Автор на Пикабу: err.please
+                    </p>
+                    <img src="./img/umor/markwithstolb.jpg">
+                    <p>
+                        Правила правильного японовода:<br>
+                        1. Обклеить кузов автомобиля наклейками любимых компаний и верить в светлое будущее.<br>
+                        2. Никогда не спорить с владельцами новеньких немцев. Они обязательно выиграют спор.<br>
+                        3. Никогда не говорить о дрифте с владельцами BMW M, год выпуска не важен.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="copyrights">
+                <h3>©Анна Дудина<br>ИСП 31-20</h3>
+            </div>
+            <div class="footer-btns">
+                <a href="#"><button type="button" class="btn btn-outline-light">ВКонтакте</button></a>
+                <a href="#"><button type="button" class="btn btn-outline-light">Телеграм</button></a>
+                <a href="#"><button type="button" class="btn btn-outline-light">Почта</button></a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
